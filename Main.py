@@ -4,10 +4,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-	return render_template("index.html")
+	return render_template("Weather_index.html")
 	
 @app.route("/api/v1/<station>/<date>")
 def about(station, date):
+    temperature = 21
     return {"station": station,
                  "date": date,
                  "temperature": temperature}
